@@ -39,6 +39,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         PhotonNetwork.JoinRandomRoom();
+        Debug.Log("Entrou no lobby");
     }
 
     //EVENTO DE ERRO AO ENTRAR SALAS
@@ -49,7 +50,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
         PhotonNetwork.CreateRoom(roomTemp);
     }
 
-    //EVENTO DE SUCESSO AO ENTRAR NA SALA
+    //EVENTO DE SUCESSO AO ENTRAR NA SALAs
     public override void OnJoinedRoom()
     {
         Debug.Log("entrou em uma sala: " + PhotonNetwork.CurrentRoom);
